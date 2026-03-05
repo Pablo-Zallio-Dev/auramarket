@@ -1,12 +1,13 @@
-import { Heart, ShoppingCart, Sun } from 'lucide-react';
+import {  Sun } from 'lucide-react';
+import IconWithBadge from './IconWithBadge';
 
 
 const IconNav = () => {
   return (
       <section className=" flex gap-4 items-center ">
             <Sun size={20} />
-            <Heart size={16} />
-            <ShoppingCart size={16} />
+            <IconWithBadge />
+            
       </section>
 
   )
