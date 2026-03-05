@@ -1,9 +1,10 @@
-import ProductCard from "./presentation/components/products/ProductCard"
+import ProductGrid from "./presentation/components/products/ProductGrid"
 
 const App = () => {
   return (
      <>
-     <ProductCard />
+     <section className=" bg-bg-100 "></section>
+     <ProductGrid />
 
      </>
   )
