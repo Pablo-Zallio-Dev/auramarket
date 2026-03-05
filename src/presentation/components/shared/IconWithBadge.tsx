@@ -7,7 +7,7 @@ const IconWithBadge = () => {
   return (
     <article className="">
       <Heart />
-      <section className=" w-2 bg-orange-accent ">1</section>
+      <section className=" flex justify-center items-center w-6 rounded-full bg-orange-accent ">1</section>
     </article>
   )
 }

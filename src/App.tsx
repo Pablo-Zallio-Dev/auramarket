@@ -1,10 +1,10 @@
-import ProductGrid from "./presentation/components/products/ProductGrid"
+import MainLayout from "./presentation/layout/MainLayout"
 
 
 const App = () => {
   return (
      <>
-      <ProductGrid />
+      <MainLayout />
      </>
   )
 }
