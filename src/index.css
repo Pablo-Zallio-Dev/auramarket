@@ -13,34 +13,37 @@
 
 
 :root {
+      --badge-color: #ececec;
       --bg-100: #FAFAFA;
       --bg-200: #F6F6F7;
       --bg-footer: #131C2E;
+      --black: #000;
       --blue-accent: #144BB8;
       --blue-accent-hover: #2a5abb;
       --border-card: #e2e4e9;
-      --orange-accent: #F98C1F;
-      --white: #fff;
-      --black: #000;
-      --icon-facorite: #717682;
       --font-color-100: #14181F;
       --font-color-200: #14181F;
-      --title-category: #414347;
+      --icon-color: #5e5e5e;
+      --orange-accent: #F98C1F;
       --text-card: #000000;
+      --title-category: #414347;
+      --white: #fff;
       
 }
 
 .dark {
+      --badge-color: #000000;
       --bg-100: #151f38;
       --bg-200: #131C2E;
       --bg-footer: #F6F6F7;
-      --border-card: #181c25;
       --blue-accent: #477EEB;
       --blue-accent-hover: #2c6be8;
+      --border-card: #181c25;
       --font-color-100: #898e95;
       --font-color-200: #8c9bb0;
-      --title-category: #b7bdc8;
+      --icon-color: #cecece;
       --text-card: #ffffff;
+      --title-category: #b7bdc8;
 
       
 }
@@ -51,20 +54,21 @@
 
       /* Colors */
 
+      --color-badge-color: var(--badge-color);
       --color-bg-100: var(--bg-100);
       --color-bg-200: var(--bg-200);
       --color-bg-footer: var(--bg-footer);
+      --color-black: var(--black);
       --color-blue-accent: var(--blue-accent);
       --color-blue-accent-hover: var(--blue-accent-hover);
       --color-border-card: var(--border-card);
-      --color-orange-accent: var(--orange-accent);
-      --color-white: var(--white);
-      --color-black: var(--black);
       --color-font-color-100: var(--font-color-100);
       --color-font-color-200: var(--font-color-200);
+      --color-icon-color: var(--icon-color);
+      --color-orange-accent: var(--orange-accent);
       --color-title-category: var(--title-category);
-      --color-icon-favorite: var(--icon-favorite);
-      --color-text-card: var(--text-card)
+      --color-text-card: var(--text-card);
+      --color-white: var(--white);
 
 }
 
