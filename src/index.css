@@ -1,5 +1,7 @@
 @import "tailwindcss";
 @custom-variant dark (&:where(.dark, .dark *));
+@import "@radix-ui/themes/styles.css";
+
 
 
 @font-face {
