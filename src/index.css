@@ -1,1 +1,71 @@
 @import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+
+@font-face {
+      font-family: "Inter";
+      font-display: swap;
+      src: url("../src/assets/font/Inter_18pt-Light.woff2") format("woff2");
+}
+
+
+
+
+:root {
+      --bg-100: #FAFAFA;
+      --bg-200: #F6F6F7;
+      --bg-footer: #131C2E;
+      --blue-accent: #144BB8;
+      --blue-accent-hover: #2a5abb;
+      --border-card: #e2e4e9;
+      --orange-accent: #F98C1F;
+      --white: #fff;
+      --black: #000;
+      --icon-facorite: #717682;
+      --font-color-100: #14181F;
+      --font-color-200: #14181F;
+      --title-category: #414347;
+      --text-card: #000000;
+      
+}
+
+.dark {
+      --bg-100: #151f38;
+      --bg-200: #131C2E;
+      --bg-footer: #F6F6F7;
+      --blue-accent: #477EEB;
+      --blue-accent-hover: #2c6be8;
+      --font-color-100: #898e95;
+      --font-color-200: #8c9bb0;
+      --title-category: #b7bdc8;
+      --text-card: #ffffff;
+
+      
+}
+
+@theme {
+
+      --font-inter: "Inter", "sans-serif";
+
+      /* Colors */
+
+      --color-bg-100: var(--bg-100);
+      --color-bg-200: var(--bg-200);
+      --color-bg-footer: var(--bg-footer);
+      --color-blue-accent: var(--blue-accent);
+      --color-blue-accent-hover: var(--blue-accent-hover);
+      --color-border-card: var(--border-card);
+      --color-orange-accent: var(--orange-accent);
+      --color-white: var(--white);
+      --color-black: var(--black);
+      --color-font-color-100: var(--font-color-100);
+      --color-font-color-200: var(--font-color-200);
+      --color-title-category: var(--title-category);
+      --color-icon-favorite: var(--icon-favorite);
+      --color-text-card: var(--text-card)
+
+}
+
+body{
+      font-family: var(--font-inter);
+}
