@@ -15,8 +15,9 @@
 :root {
       --badge-color: #ececec;
       --bg-100: #FAFAFA;
-      --bg-200: #F6F6F7;
+      --bg-200: #efefef;
       --bg-footer: #131C2E;
+      --bg-input: #fefefe;
       --black: #000;
       --blue-accent: #144BB8;
       --blue-accent-hover: #2a5abb;
@@ -37,6 +38,7 @@
       --bg-100: #151f38;
       --bg-200: #131C2E;
       --bg-footer: #F6F6F7;
+      --bg-input: #1b192a;
       --blue-accent: #477EEB;
       --blue-btn: #0b113f;
       --blue-accent-hover: #2c6be8;
@@ -61,6 +63,7 @@
       --color-bg-100: var(--bg-100);
       --color-bg-200: var(--bg-200);
       --color-bg-footer: var(--bg-footer);
+      --color-bg-input: var(--bg-input);
       --color-black: var(--black);
       --color-blue-accent: var(--blue-accent);
       --color-blue-accent-hover: var(--blue-accent-hover);
