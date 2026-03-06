@@ -7,7 +7,9 @@ const MainLayout = () => {
     <>
     <NavBar />
     <HomeView />
-    <ProductGrid />
+    <section className=" bg-bg-200 ">
+      <ProductGrid />
+    </section>
     </>
   )
 }
