@@ -1,6 +1,6 @@
 import { create } from "zustand";
 import type { Product } from "../../core/domain/Product";
-import getProducts from "../../infrastructure/repositories/ApiProductRepository";
+import {getProducts} from "../../infrastructure/repositories/ApiProductRepository";
 
 
 interface ProductState{
