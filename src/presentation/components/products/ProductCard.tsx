@@ -1,7 +1,7 @@
-import iconShoppingCart from '../../../assets/icons/icon_shopping_cart.svg'
 import BadgeDiscount from '../shared/BadgeDiscount'
 import FavoriteProduct from '../shared/FavoriteProduct'
 import type { Product } from '../../../core/domain/Product'
+import { ShoppingCart } from 'lucide-react'
 
 const ProductCard = ( { product }: {product:Product} ) => {
       return (
@@ -21,7 +21,7 @@ const ProductCard = ( { product }: {product:Product} ) => {
                         <h2 className=" text-lg text-text-card font-extrabold truncate "> {product.title} </h2>
                               <p className=" text-text-card font-extrabold">${product.price}</p>
                         <button className=" flex justify-center gap-2 text-sm w-full p-2 mt-4 text-white bg-blue-accent rounded-lg  ">
-                              <img src={iconShoppingCart} alt="" />
+                              <ShoppingCart size={16} />
                               <p className="">Add to cart</p>
                         </button>
                   </section>

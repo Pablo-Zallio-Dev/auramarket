@@ -1,3 +1,4 @@
+import ProductGrid from '../components/products/ProductGrid'
 import NavBar from '../components/shared/NavBar'
 import HomeView from '../views/HomeView'
 
@@ -6,6 +7,7 @@ const MainLayout = () => {
     <>
     <NavBar />
     <HomeView />
+    <ProductGrid />
     </>
   )
 }

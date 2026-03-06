@@ -1,10 +1,10 @@
 
-import iconHeart from '../../../assets/icons/icon_heart.svg'
+import { Heart } from 'lucide-react'
 
 const FavoriteProduct = () => {
   return (
     <section className=" p-3 bg-icon-favorite rounded-full backdrop-blur-sm ">
-      <img src={iconHeart} alt="" />
+      <Heart size={16} />
     </section>
   )
 }

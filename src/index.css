@@ -26,6 +26,7 @@
       --icon-color: #5e5e5e;
       --orange-accent: #F98C1F;
       --text-card: #000000;
+      --text-opposite: #ededed;
       --title-category: #414347;
       --white: #fff;
       
@@ -37,12 +38,14 @@
       --bg-200: #131C2E;
       --bg-footer: #F6F6F7;
       --blue-accent: #477EEB;
+      --blue-btn: #0b113f;
       --blue-accent-hover: #2c6be8;
       --border-card: #181c25;
       --font-color-100: #898e95;
       --font-color-200: #8c9bb0;
       --icon-color: #cecece;
       --text-card: #ffffff;
+      --text-opposite: #141414;
       --title-category: #b7bdc8;
 
       
@@ -61,13 +64,15 @@
       --color-black: var(--black);
       --color-blue-accent: var(--blue-accent);
       --color-blue-accent-hover: var(--blue-accent-hover);
+      --color-blue-btn: var(--blue-btn);
       --color-border-card: var(--border-card);
       --color-font-color-100: var(--font-color-100);
       --color-font-color-200: var(--font-color-200);
       --color-icon-color: var(--icon-color);
       --color-orange-accent: var(--orange-accent);
-      --color-title-category: var(--title-category);
       --color-text-card: var(--text-card);
+      --color-text-opposite: var(--text-opposite);
+      --color-title-category: var(--title-category);
       --color-white: var(--white);
 
 }
