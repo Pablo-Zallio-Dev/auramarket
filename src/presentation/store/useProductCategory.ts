@@ -3,8 +3,9 @@ import { getCategories } from "../../infrastructure/repositories/ApiProductRepos
 import type { Categories } from "../../core/domain/Category"
 
 interface CategoriesState{
-      categories: Categories[]
+      categories: Categories[],
       loadCategories: () => Promise<void>
+ 
 }
 
 export const useProductCategory = create<CategoriesState>((set) => ({
@@ -16,5 +17,6 @@ export const useProductCategory = create<CategoriesState>((set) => ({
             } catch (error) {
                   console.log(error)
             }
-      }
+      },
+      
 }))

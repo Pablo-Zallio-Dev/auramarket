@@ -1,11 +1,20 @@
 import type { Categories } from "../../../core/domain/Category"
+import { useProductStore } from "../../store/useProductStore"
+import Button from "./Button"
 
 
 
 const Category = ( {title}:  Categories ) => {
+
+const loadProductsByCategory = useProductStore((state) => state.loadProductsByCategory)
+
+
+
+
   return (
     <>
-    <p className=" text-sm text-text-card "> {title} </p>
+    
+    <Button text={title} variant="buttonFilter" onClick={() => loadProductsByCategory(title)} />
     </>
   )
 }
