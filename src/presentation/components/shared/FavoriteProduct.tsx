@@ -2,11 +2,23 @@
 import { Heart } from 'lucide-react'
 
 const FavoriteProduct = () => {
+
+     
   return (
-    <section className=" p-3 bg-icon-favorite rounded-full backdrop-blur-sm ">
-      <Heart size={16} />
-    </section>
+    <button className=" bg-icon-favorite rounded-full backdrop-blur-sm " >
+      <Heart  size={16} />
+    </button>
   )
 }
 
 export default FavoriteProduct
+
+
+
+/* 
+
+Esto conun condicional
+style={{fill: 'red'}}
+
+
+*/

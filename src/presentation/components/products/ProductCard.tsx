@@ -4,6 +4,10 @@ import type { Product } from '../../../core/domain/Product'
 import { ShoppingCart } from 'lucide-react'
 
 const ProductCard = ( { product }: {product:Product} ) => {
+
+  
+
+
       return (
             <article className=" w-full rounded-xl bg-bg-100 border border-border-card shadow-lg/20 overflow-hidden ">
                   <section className=" relative h-80 ">
