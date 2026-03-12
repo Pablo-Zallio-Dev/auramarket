@@ -31,7 +31,7 @@ const FavoriteGallery = () => {
       
 
   return (
-    <section className="  flex flex-col justify-between gap-8  w-full h-screen overflow-y-auto no-scrollbar ">
+    <section className="  flex flex-col gap-8  w-full h-screen overflow-y-auto no-scrollbar ">
       {
             favoriteProducts.map((product) => (
                   <>
