@@ -10,18 +10,21 @@ const VARIANT_MAP = {
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
       text: string;
       variant?: keyof typeof VARIANT_MAP;
+      icon?: React.ElementType;
+      colorIcon?: string;
       onClick?: () => void;
       type?: "button" | "submit";
 }
 
 
 
-const Button = ({ type = "button", text, variant = 'blue', onClick }: ButtonProps) => {
+const Button = ({ icon: Icon, type = "button", text, variant = 'blue', colorIcon, onClick }: ButtonProps) => {
       return (
-            <button type={type} className={clsx("w-full py-3 shadow-md/20 rounded-full text-sm font-bold transition-all duration-300",
+            <button type={type} className={clsx(" flex justify-center gap-3 w-full py-3 shadow-md/20 rounded-full text-sm font-bold transition-all duration-300",
                   VARIANT_MAP[variant],
             )}
-                  onClick={onClick}>
+            onClick={onClick}>
+                  {Icon && <Icon size={20} color={colorIcon} />}
                   {text}
             </button>
       )

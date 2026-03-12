@@ -21,7 +21,7 @@ export const useProductStore = create<ProductState>((set) => ({
                   set({ isLoading: true })
                   const data = await getProducts()
 
-                  set({ products: data, isLoading: false})
+                  set({ error: null, products: data, isLoading: false})
             } catch  {
                   set({ error: 'Hay un error', isLoading: false })
             }

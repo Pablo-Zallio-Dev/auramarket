@@ -1,12 +1,30 @@
 
 import { Heart } from 'lucide-react'
+import { useFavoriteProduct } from '../../store/useFavoriteStore'
+import type { Product } from '../../../core/domain/Product'
 
-const FavoriteProduct = () => {
+const FavoriteProduct = ( {product}: {product: Product} ) => {
+
+const toogleFavoriteProduct= useFavoriteProduct((state) => state.toggleFavoriteProduct)
+const favoriteProduct = useFavoriteProduct((state) => state.favoritesProduct)
+
+const isFavorite = favoriteProduct.some((p) => p.id === product.id);
+     
   return (
-    <section className=" p-3 bg-icon-favorite rounded-full backdrop-blur-sm ">
-      <Heart size={16} />
-    </section>
+    <button className=" bg-icon-favorite rounded-full backdrop-blur-sm " onClick={() => toogleFavoriteProduct(product)}>
+      <Heart fill={isFavorite ? "red" : "none"} size={16} />
+    </button>
   )
 }
 
 export default FavoriteProduct
+
+
+
+/* 
+
+Esto conun condicional
+style={{fill: 'red'}}
+
+
+*/

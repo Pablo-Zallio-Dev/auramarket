@@ -80,6 +80,20 @@
 
 }
 
+html {
+      scrollbar-gutter: stable;
+}
+
 body{
       font-family: var(--font-inter);
+}
+
+/* Añade esto a tu index.css o globals.css */
+.no-scrollbar::-webkit-scrollbar {
+    display: none; /* Oculta en Chrome, Safari y Opera */
+}
+
+.no-scrollbar {
+    -ms-overflow-style: none;  /* IE y Edge */
+    scrollbar-width: none;  /* Firefox */
 }

@@ -4,6 +4,10 @@ import type { Product } from '../../../core/domain/Product'
 import { ShoppingCart } from 'lucide-react'
 
 const ProductCard = ( { product }: {product:Product} ) => {
+
+  
+
+
       return (
             <article className=" w-full rounded-xl bg-bg-100 border border-border-card shadow-lg/20 overflow-hidden ">
                   <section className=" relative h-80 ">
@@ -11,7 +15,7 @@ const ProductCard = ( { product }: {product:Product} ) => {
                         <section className=" absolute top-0 left-0 right-0 bottom-0 flex flex-col justify-between m-4  ">
                               <section className="  flex items-center justify-between  ">
                                     {product.discount && <BadgeDiscount discount={product.discount} />}
-                                    <FavoriteProduct />
+                                    <FavoriteProduct product={product} />
                               </section>
 
                         </section>
