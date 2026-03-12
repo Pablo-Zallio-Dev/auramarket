@@ -15,7 +15,7 @@ const ProductCard = ( { product }: {product:Product} ) => {
                         <section className=" absolute top-0 left-0 right-0 bottom-0 flex flex-col justify-between m-4  ">
                               <section className="  flex items-center justify-between  ">
                                     {product.discount && <BadgeDiscount discount={product.discount} />}
-                                    <FavoriteProduct />
+                                    <FavoriteProduct product={product} />
                               </section>
 
                         </section>
