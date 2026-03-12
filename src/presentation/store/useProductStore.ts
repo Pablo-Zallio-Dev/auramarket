@@ -4,11 +4,14 @@ import {getProducts, getProductsForCategories} from "../../infrastructure/reposi
 
 
 interface ProductState{
-      products: Product[]
+      products: Product[],
       isLoading: boolean,
       error: string | null,
       loadProducts: () => Promise<void>
-      loadProductsByCategory: (category: string) => Promise<void>
+      loadProductsByCategory: (category: string) => Promise<void>,
+      searchQuery: string,
+      setSearchQuery: (value:string) => void;
+      cleanSearchQuery: () => void
 }
 
 export const useProductStore = create<ProductState>((set) => ({
@@ -42,6 +45,13 @@ export const useProductStore = create<ProductState>((set) => ({
                   
                   set({ error: 'No hay productos', isLoading: false })
             }
+      },
+      searchQuery: '',
+      setSearchQuery: (value) => {
+            set({ searchQuery: value  })
+      },
+      cleanSearchQuery: () => {
+            set({ searchQuery: '' })
       }
 
 }))

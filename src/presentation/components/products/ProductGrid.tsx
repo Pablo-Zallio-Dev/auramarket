@@ -1,6 +1,7 @@
 import { useEffect } from "react"
 import { useProductStore } from "../../store/useProductStore"
 import ProductCard from "./ProductCard"
+import SearchProductsEmpty from "./SearchProductsEmpty"
 
 
 const ProductGrid = () => {
@@ -10,9 +11,18 @@ const ProductGrid = () => {
       const isLoading = useProductStore((state) => state.isLoading)
       const error = useProductStore((state) => state.error)
 
+      const searchQuery = useProductStore((state) => state.searchQuery)
+
+      const filteredProducts = products.filter((product) =>
+  product.title.toLowerCase().includes(searchQuery.toLowerCase())
+);
+
+
+
       useEffect(() => {
             loadProducts();
       }, [loadProducts]);
+
 
 
 
@@ -27,27 +37,19 @@ const ProductGrid = () => {
       // ProductGrid.tsx
 
       if (error) return (
-            <section className="flex flex-col items-center justify-center min-h-100 w-full p-10 text-center">
-                  <div className="bg-red-50 p-6 rounded-2xl border border-red-100">
-                        <h3 className="text-red-800 font-bold text-lg">¡Vaya! Algo salió mal</h3>
-                        <p className="text-red-600 mt-2 mb-6">{error}</p>
-
-                        <button
-                              onClick={() => loadProducts()}
-                              className="px-6 py-2 bg-aura-primary text-text-card rounded-full hover:bg-blue-700 transition-colors"
-                        >
-                              Reintentar carga
-                        </button>
-                  </div>
-            </section>
+            <SearchProductsEmpty />
       );
+
+      if(filteredProducts.length === 0) return(
+           <SearchProductsEmpty />
+      )
 
       return (
 
 
             <section className=" grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-6 gap-y-10 py-20 px-4 2xl:px-56 bg-bg-200 ">
                   {
-                        products.map((product) => (
+                        filteredProducts.map((product) => (
                               <ProductCard key={product.id} product={product} />
                         ))
                   }
