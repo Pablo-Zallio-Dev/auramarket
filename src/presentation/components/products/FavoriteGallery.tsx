@@ -9,7 +9,7 @@ const FavoriteGallery = () => {
       const favoriteProducts = useFavoriteProduct((state) => state.favoritesProduct)
       const removeProduct = useFavoriteProduct((state) => state.toggleFavoriteProduct)
       const isOpen = useFavoriteProduct((state) => state.isOpen)
-      const removeAll = useFavoriteProduct((state) => state.removeFavriteAllProducts)
+      const removeAll = useFavoriteProduct((state) => state.removeFavoriteAllProducts)
 
       useEffect(() => {
   if (isOpen) {
@@ -38,7 +38,7 @@ const FavoriteGallery = () => {
                   <section className=" flex justify-between gap-8 group  ">
                         <div className=" flex gap-4 ">
                         <div className=" max-w-12 md:max-w-18 border border-border-card rounded-lg bg-bg-100">
-                        <img src={product.cardImage} alt="" className="  group-hover:scale-110 transition-transform duration-200 " />
+                        <img src={product.cardImage} alt={product.title} className="  group-hover:scale-110 transition-transform duration-200 " />
 
                         </div>
                         <section className="  flex flex-col justify-around text-xs md:text-sm text-text-card    ">

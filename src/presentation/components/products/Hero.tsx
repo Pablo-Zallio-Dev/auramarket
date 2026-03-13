@@ -4,7 +4,7 @@ import image from '../../../assets/images/image.webp'
 const Hero = () => {
 
     return (
-                  <article className=" flex flex-col justify-center items-center  w-full h-screen  md:h-180 md:px-6 xl ">
+                  <article className=" flex flex-col justify-center items-center  w-full h-screen  pt-18 md:h-180 md:px-6 xl ">
                         <section className="grid grid-cols-1 md:grid-cols-2 justify-items-center  gap-10  items-center max-w-350 ">
                               <section className=" flex flex-col px-4 gap-6 ">
                                     <h1 className=" font-extrabold text-text-card text-5xl lg:text-7xl text-center md:text-start "> Redefining Modern <span className=" text-blue-accent "> E-commerce </span>  </h1>
@@ -14,7 +14,9 @@ const Hero = () => {
                                           <Button text="Explore Collections" variant="orange" />
                                     </section>
                               </section>
-                              <img src={image} alt="" />
+                              <div className=" w-70 rounded-xl shadow-xl/50 overflow-hidden lg:hover:scale-102 transition-transform duration-300">
+                              <img src={image} alt="Business image" className=" w-full object-contain  " />
+                              </div>
                         </section>
                   </article>
             )

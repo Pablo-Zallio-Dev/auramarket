@@ -1,12 +1,14 @@
 import { create } from "zustand";
 import type { Product } from "../../core/domain/Product";
-import {getProducts, getProductsForCategories} from "../../infrastructure/repositories/ApiProductRepository";
+import {ApiProductRepository} from "../../infrastructure/repositories/ApiProductRepository";
 
+
+const repository = ApiProductRepository;
 
 interface ProductState{
       products: Product[],
       isLoading: boolean,
-      error: string | null,
+      error: boolean | null,
       loadProducts: () => Promise<void>
       loadProductsByCategory: (category: string) => Promise<void>,
       searchQuery: string,
@@ -18,32 +20,32 @@ export const useProductStore = create<ProductState>((set) => ({
 
       products: [],
       isLoading: false,
-      error: null,
+      error: false,
       loadProducts: async() =>{
             try {
                   set({ isLoading: true })
-                  const data = await getProducts()
+                  const data = await repository.getProducts()
 
-                  set({ error: null, products: data, isLoading: false})
+                  set({ error: false, products: data, isLoading: false})
             } catch  {
-                  set({ error: 'Hay un error', isLoading: false })
+                  set({ error: true, isLoading: false })
             }
       },
       loadProductsByCategory: async(category: string) => {
             try {
                   set({ isLoading: true })
-                  const data = await getProductsForCategories(category)
+                  const data = await repository.getProductsByCategory(category)
 
                   if(data.length === 0 ){
                         console.log("Entro al if")
-                        set({ error: 'No hay productos', isLoading: false })
+                        set({ error: true, isLoading: false })
                         return
                   }
 
-                  set({ error: null, products: data, isLoading: false })
+                  set({ error: false, products: data, isLoading: false })
             } catch {
                   
-                  set({ error: 'No hay productos', isLoading: false })
+                  set({ error: true, isLoading: false })
             }
       },
       searchQuery: '',

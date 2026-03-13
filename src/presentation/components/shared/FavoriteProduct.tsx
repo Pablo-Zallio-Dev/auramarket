@@ -12,7 +12,7 @@ const isFavorite = favoriteProduct.some((p) => p.id === product.id);
      
   return (
     <button className=" bg-icon-favorite rounded-full backdrop-blur-sm " onClick={() => toogleFavoriteProduct(product)}>
-      <Heart fill={isFavorite ? "red" : "none"} size={16} />
+      <Heart fill={isFavorite ? "red" : "none"} color='var(--text-card)' size={16} />
     </button>
   )
 }
@@ -21,10 +21,3 @@ export default FavoriteProduct
 
 
 
-/* 
-
-Esto conun condicional
-style={{fill: 'red'}}
-
-
-*/

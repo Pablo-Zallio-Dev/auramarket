@@ -11,7 +11,7 @@ const ProductCard = ( { product }: {product:Product} ) => {
       return (
             <article className=" w-full rounded-xl bg-bg-100 border border-border-card shadow-lg/20 overflow-hidden ">
                   <section className=" relative h-80 ">
-                        <img src={product.cardImage} alt="" className=" w-full h-full object-cover " />
+                        <img src={product.cardImage} alt={product.title} className=" w-full h-full object-cover " />
                         <section className=" absolute top-0 left-0 right-0 bottom-0 flex flex-col justify-between m-4  ">
                               <section className="  flex items-center justify-between  ">
                                     {product.discount && <BadgeDiscount discount={product.discount} />}

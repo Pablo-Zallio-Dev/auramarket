@@ -1,6 +1,9 @@
 import { create } from "zustand"
-import { getCategories } from "../../infrastructure/repositories/ApiProductRepository"
+import { ApiProductRepository } from "../../infrastructure/repositories/ApiProductRepository"
 import type { Categories } from "../../core/domain/Category"
+import type { ProductsRepository } from "../../core/domain/ProductsRepository";
+
+const repository: ProductsRepository = ApiProductRepository;
 
 interface CategoriesState{
       categories: Categories[],
@@ -12,7 +15,7 @@ export const useProductCategory = create<CategoriesState>((set) => ({
       categories: [],
       loadCategories: async() => {
             try {
-                  const data = await getCategories()
+                  const data = await repository.getCategories()
                   set({categories: data})
             } catch (error) {
                   console.log(error)

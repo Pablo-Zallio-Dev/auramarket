@@ -1,30 +1,25 @@
+import type { ProductsRepository } from "../../core/domain/ProductsRepository"
 import api from "../api/api.instance"
-import type { ApiCategories } from "../api/category.dto"
-import type { ApiProduct } from "../api/product.dto"
+
 import { categoriesMapper } from "../mappers/category.mapper"
 import { productMapper } from "../mappers/product.mapper"
 
 
 
-export const getProducts = async() => {
-      const response = await api.get('products')
-      const apiProducts = response.data.products
-      
-      return apiProducts.map((apiProduct: ApiProduct) => productMapper(apiProduct))
-}
+export const ApiProductRepository: ProductsRepository = {
+  
+  async getProducts() {
+    const response = await api.get('products');
+    return response.data.products.map(productMapper);
+  },
 
-export const getCategories = async() => {
-      const response = await api.get('products/categories')
-      const apiCategories = response.data
-      
-      return apiCategories.map((apiCategories: ApiCategories) => categoriesMapper(apiCategories))
-}
+  async getCategories() {
+    const response = await api.get('products/categories');
+    return response.data.map(categoriesMapper);
+  },
 
-
-
-export const getProductsForCategories = async(category: string) => {
-      const response = await api.get(`products/category/${category}`)
-      const apiProductCategory = response.data.products
-
-      return apiProductCategory.map((apiProductCategory: ApiProduct) => productMapper(apiProductCategory))
-}
+  async getProductsByCategory(category: string) {
+    const response = await api.get(`products/category/${category}`);
+    return response.data.products.map(productMapper);
+  }
+};

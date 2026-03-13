@@ -5,7 +5,7 @@ import type { Product } from "../../core/domain/Product";
 interface FavoriteState {
       favoritesProduct: Product[],
       toggleFavoriteProduct: (product: Product) => void,
-      removeFavriteAllProducts: () => void,
+      removeFavoriteAllProducts: () => void,
       isOpen: boolean
       setOpenFavoriteModal: () => void;
 }
@@ -24,7 +24,7 @@ export const useFavoriteProduct = create<FavoriteState>()(
                         return { favoritesProduct: newFavorites }
 
                   }),
-                  removeFavriteAllProducts() {
+                  removeFavoriteAllProducts() {
                         set({ favoritesProduct: [] })
                   },
                   isOpen: false,
